@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.sto.controller.MainController">
+    <center>
+        <TabPane tabClosingPolicy="UNAVAILABLE">
+            <!-- Workers Tab -->
+            <Tab text="Workers">
+                <VBox spacing="10.0">
+                    <padding>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                    </padding>
+                    <Label style="-fx-font-size: 16px; -fx-font-weight: bold;" text="Add New Worker" />
+                    <GridPane hgap="10.0" vgap="10.0">
+                        <columnConstraints>
+                            <ColumnConstraints hgrow="NEVER" minWidth="100.0" />
+                            <ColumnConstraints hgrow="ALWAYS" />
+                            <ColumnConstraints hgrow="NEVER" />
+                        </columnConstraints>
+                        <Label text="Name:" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+                        <TextField fx:id="workerNameField" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+                        <Label text="Payment/Hour:" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+                        <TextField fx:id="workerPaymentField" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                        <Button onAction="#addWorker" text="Add Worker" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                    </GridPane>
+                    <Separator />
+                    <Label style="-fx-font-size: 16px; -fx-font-weight: bold;" text="Workers List" />
+                    <TableView fx:id="workerTable" prefHeight="300.0">
+                        <columns>
+                            <TableColumn fx:id="workerNameColumn" prefWidth="200.0" text="Name" />
+                            <TableColumn fx:id="workerPaymentColumn" prefWidth="150.0" text="Payment/Hour" />
+                        </columns>
+                    </TableView>
+                </VBox>
+            </Tab>
+
+            <!-- Details Tab -->
+            <Tab text="Details">
+                <VBox spacing="10.0">
+                    <padding>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                    </padding>
+                    <Label style="-fx-font-size: 16px; -fx-font-weight: bold;" text="Add New Detail" />
+                    <GridPane hgap="10.0" vgap="10.0">
+                        <columnConstraints>
+                            <ColumnConstraints hgrow="NEVER" minWidth="100.0" />
+                            <ColumnConstraints hgrow="ALWAYS" />
+                            <ColumnConstraints hgrow="NEVER" />
+                        </columnConstraints>
+                        <Label text="Title:" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+                        <TextField fx:id="detailTitleField" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+                        <Label text="Price:" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+                        <TextField fx:id="detailPriceField" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                        <Label text="Quantity:" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+                        <TextField fx:id="detailQuantityField" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                        <Button onAction="#addDetail" text="Add Detail" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                    </GridPane>
+                    <Separator />
+                    <Label style="-fx-font-size: 16px; -fx-font-weight: bold;" text="Details List" />
+                    <TableView fx:id="detailTable" prefHeight="300.0">
+                        <columns>
+                            <TableColumn fx:id="detailTitleColumn" prefWidth="200.0" text="Title" />
+                            <TableColumn fx:id="detailPriceColumn" prefWidth="100.0" text="Price" />
+                            <TableColumn fx:id="detailQuantityColumn" prefWidth="100.0" text="Quantity" />
+                        </columns>
+                    </TableView>
+                </VBox>
+            </Tab>
+
+            <!-- Autos Tab -->
+            <Tab text="Autos">
+                <VBox spacing="10.0">
+                    <padding>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                    </padding>
+                    <Label style="-fx-font-size: 16px; -fx-font-weight: bold;" text="Add New Auto" />
+                    <GridPane hgap="10.0" vgap="10.0">
+                        <columnConstraints>
+                            <ColumnConstraints hgrow="NEVER" minWidth="100.0" />
+                            <ColumnConstraints hgrow="ALWAYS" />
+                            <ColumnConstraints hgrow="NEVER" />
+                        </columnConstraints>
+                        <Label text="Name:" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+                        <TextField fx:id="autoNameField" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+                        <Label text="Owner:" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+                        <TextField fx:id="autoOwnerField" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                        <Button onAction="#addAuto" text="Add Auto" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                    </GridPane>
+                    <Separator />
+                    <Label style="-fx-font-size: 16px; -fx-font-weight: bold;" text="Autos List" />
+                    <TableView fx:id="autoTable" prefHeight="300.0">
+                        <columns>
+                            <TableColumn fx:id="autoNameColumn" prefWidth="200.0" text="Name" />
+                            <TableColumn fx:id="autoOwnerColumn" prefWidth="200.0" text="Owner" />
+                        </columns>
+                    </TableView>
+                </VBox>
+            </Tab>
+
+            <!-- Reports Tab -->
+            <Tab text="Repair Reports">
+                <VBox spacing="10.0">
+                    <padding>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                    </padding>
+                    <Label style="-fx-font-size: 16px; -fx-font-weight: bold;" text="Create New Repair Report" />
+                    <GridPane hgap="10.0" vgap="10.0">
+                        <columnConstraints>
+                            <ColumnConstraints hgrow="NEVER" minWidth="100.0" />
+                            <ColumnConstraints hgrow="ALWAYS" />
+                            <ColumnConstraints hgrow="NEVER" />
+                        </columnConstraints>
+                        <Label text="Worker:" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+                        <ComboBox fx:id="reportWorkerCombo" maxWidth="1.7976931348623157E308" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+                        <Label text="Auto:" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+                        <ComboBox fx:id="reportAutoCombo" maxWidth="1.7976931348623157E308" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                        <Label text="Worked Hours:" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+                        <TextField fx:id="reportHoursField" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                        <Button onAction="#createReport" text="Create Report" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                    </GridPane>
+
+                    <HBox spacing="20.0">
+                        <VBox spacing="5.0" HBox.hgrow="ALWAYS">
+                            <Label text="Available Details:" />
+                            <ListView fx:id="availableDetailsList" prefHeight="150.0" />
+                            <Button onAction="#addDetailToReport" text="Add to Report" />
+                        </VBox>
+                        <VBox spacing="5.0" HBox.hgrow="ALWAYS">
+                            <Label text="Selected Details:" />
+                            <ListView fx:id="selectedDetailsList" prefHeight="150.0" />
+                            <Button onAction="#removeDetailFromReport" text="Remove from Report" />
+                        </VBox>
+                    </HBox>
+
+                    <Separator />
+                    <Label style="-fx-font-size: 16px; -fx-font-weight: bold;" text="Repair Reports" />
+                    <TableView fx:id="reportTable" prefHeight="300.0">
+                        <columns>
+                            <TableColumn fx:id="reportDateColumn" prefWidth="150.0" text="Date" />
+                            <TableColumn fx:id="reportWorkerColumn" prefWidth="150.0" text="Worker" />
+                            <TableColumn fx:id="reportAutoColumn" prefWidth="150.0" text="Auto" />
+                            <TableColumn fx:id="reportTotalColumn" prefWidth="100.0" text="Total Cost" />
+                            <TableColumn fx:id="reportStatusColumn" prefWidth="150.0" text="Status" />
+                        </columns>
+                    </TableView>
+                </VBox>
+            </Tab>
+        </TabPane>
+    </center>
+</BorderPane>
