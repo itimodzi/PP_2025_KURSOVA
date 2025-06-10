@@ -166,9 +166,9 @@ public class MainController implements Initializable {
             String nextStatus = getNextStatus(currentStatus);
 
             report.setStatus(nextStatus);
-            reportDAO.update(report); // Assuming you have an update method in your DAO
+            reportDAO.update(report);
 
-            // Refresh the table to show updated status
+
             reportTable.refresh();
 
         } catch (Exception e) {
@@ -182,11 +182,10 @@ public class MainController implements Initializable {
                 if (i < statusProgression.length - 1) {
                     return statusProgression[i + 1];
                 } else {
-                    return currentStatus; // Already at final status
-                }
+                    return currentStatus;
             }
         }
-        return "created"; // Default fallback
+        return "created"; 
     }
 
     private void loadData() {
